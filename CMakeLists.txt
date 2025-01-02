@@ -14,20 +14,9 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(day1
-        day1/main.cpp
-        day1/day1.cpp
-        day1/day1.h
-)
-
-add_executable(day1_test
-        day1/day1_test.cpp
-        day1/day1.cpp
-        day1/day1.h
-)
-
-target_link_libraries(day1_test PRIVATE GTest::gtest_main)
+include(day1/CMakeLists.txt)
+include(day2/CMakeLists.txt)
 
 include(GoogleTest)
 gtest_discover_tests(day1_test)
-
+gtest_discover_tests(day2_test)

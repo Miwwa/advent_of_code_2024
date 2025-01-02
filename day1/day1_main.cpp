@@ -3,7 +3,7 @@
 #include <fstream>
 #include <iostream>
 
-int main(int argc, const char* argv[]) {
+int main(const int argc, const char* argv[]) {
     std::string input_file = "input.txt";
     if (argc >= 2) {
         input_file = argv[1];
